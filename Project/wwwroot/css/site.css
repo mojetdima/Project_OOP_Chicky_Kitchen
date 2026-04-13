@@ -43,7 +43,7 @@ a {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 0; /* remove gap */
+  padding: 0; 
   margin: 0;
   backdrop-filter: blur(12px);
 }
@@ -259,7 +259,6 @@ a {
   white-space: nowrap;
 }
 
-/* Ensure long dish names or prices don't overflow card borders */
 .menu-card {
   overflow: hidden;
   word-wrap: break-word;

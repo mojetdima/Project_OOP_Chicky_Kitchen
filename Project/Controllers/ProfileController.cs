@@ -10,7 +10,6 @@ public class ProfileController(ApplicationDbContext dbContext) : Controller
 {
     public async Task<IActionResult> Index()
     {
-        // If a user is signed in, their login is stored in session
         var login = HttpContext.Session.GetString("UserLogin");
         User? user = null;
         if (!string.IsNullOrEmpty(login))
