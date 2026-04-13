@@ -1,0 +1,23 @@
+@model IEnumerable<Menu>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<section class="page-header">
+    <span class="eyebrow">Menu Page</span>
+    <h1>Favorite dishes from Chicky Kitchen</h1>
+    <p>Browse our signature plates, drinks, and desserts.</p>
+</section>
+
+<section class="card-grid">
+    @foreach (var item in Model)
+    {
+        <article class="menu-card">
+            <div class="menu-header">
+                <h2>@item.DishName</h2>
+                <span class="price-tag">@item.Price.ToString("0.00") zl</span>
+            </div>
+            <p>@item.Compound</p>
+        </article>
+    }
+</section>

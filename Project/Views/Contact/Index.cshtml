@@ -1,0 +1,39 @@
+@model ContactViewModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="page-header">
+    <span class="eyebrow">Contact Page</span>
+    <h1>Visit or contact Chicky Kitchen</h1>
+    <p>We are happy to help with bookings, events, and takeaway information.</p>
+</section>
+
+<section class="contact-grid">
+    <article class="info-card">
+        <h2>Phone numbers</h2>
+        <ul class="plain-list">
+            @foreach (var phone in Model.Phones)
+            {
+                <li>@phone</li>
+            }
+        </ul>
+    </article>
+    <article class="info-card">
+        <h2>Emails</h2>
+        <ul class="plain-list">
+            @foreach (var email in Model.Emails)
+            {
+                <li>@email</li>
+            }
+        </ul>
+    </article>
+    <article class="info-card">
+        <h2>Address</h2>
+        <p>@Model.Address</p>
+    </article>
+    <article class="info-card">
+        <h2>Opening hours</h2>
+        <p>@Model.OpeningHours</p>
+    </article>
+</section>

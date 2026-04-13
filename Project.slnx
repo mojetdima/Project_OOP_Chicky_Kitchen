@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/DataBase/">
+    <File Path="DbContext.cs" />
+    <File Path="History.cs" />
+    <File Path="Menu.cs" />
+    <File Path="Reservations.cs" />
+    <File Path="Users.cs" />
+  </Folder>
+  <Project Path="Project/Project.csproj" />
+</Solution>

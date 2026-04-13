@@ -1,0 +1,23 @@
+@model IEnumerable<GalleryItemViewModel>
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<section class="page-header">
+    <span class="eyebrow">Gallery</span>
+    <h1>Pictures of food</h1>
+    <p>A visual taste of our most-loved dishes and drinks.</p>
+</section>
+
+<section class="gallery-grid">
+    @foreach (var item in Model)
+    {
+        <article class="gallery-card">
+            <img src="@item.ImageUrl" alt="@item.Title" />
+            <div class="gallery-copy">
+                <h2>@item.Title</h2>
+                <p>@item.Description</p>
+            </div>
+        </article>
+    }
+</section>

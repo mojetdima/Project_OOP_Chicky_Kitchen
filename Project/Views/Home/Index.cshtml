@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@{
+    var vm = (HomeViewModel)ViewData.Model!;
+}
+
+<section class="hero-section">
+    <div class="hero-copy">
+        <span class="eyebrow">Restaurant & Family Dining</span>
+        <h1>@vm.Headline</h1>
+        <p class="lead">@vm.WelcomeText</p>
+        <div class="hero-actions">
+            <a class="btn btn-brand" asp-controller="Menu" asp-action="Index">Explore Menu</a>
+            <a class="btn btn-outline-brand" asp-controller="Profile" asp-action="CreateReservation">Book a Table</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <h2>Slogans</h2>
+        <ul>
+            @foreach (var slogan in vm.Slogans)
+            {
+                <li>@slogan</li>
+            }
+        </ul>
+    </div>
+</section>
+
+<section class="info-grid">
+    @foreach (var highlight in vm.Highlights)
+    {
+        <article class="info-card">
+            <h3>Why guests love us</h3>
+            <p>@highlight</p>
+        </article>
+    }
+</section>
+
+<section class="welcome-panel">
+    <div>
+        <span class="eyebrow">Welcome Part</span>
+        <h2>Your cozy place for crispy favorites</h2>
+        <p>From quick lunches to evening reservations, Chicky Kitchen is built for tasty food, friendly service, and memorable moments around the table.</p>
+    </div>
+    <div class="stats-grid">
+        <div>
+            <strong>5+</strong>
+            <span>Signature dishes</span>
+        </div>
+        <div>
+            <strong>7</strong>
+            <span>Days open each week</span>
+        </div>
+        <div>
+            <strong>100%</strong>
+            <span>Freshly prepared taste</span>
+        </div>
+    </div>
+</section>
